@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
 class StringBuilderReversal{
-    public class Main {
         public static void main(String[] args) {
             Scanner scn= new Scanner(System.in);
 
@@ -11,5 +10,4 @@ class StringBuilderReversal{
             String reverso= new StringBuilder(frase).reverse().toString();
             System.out.println(reverso);
         }
-    }
 }
