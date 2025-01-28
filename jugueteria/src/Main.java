@@ -14,6 +14,6 @@ public class Main {
 
         int peso_total= (payasos * pesop) + (munecas * pesom);
 
-        System.out.println("El peso total del paquete es: "+ peso_total);
+        System.out.println("El peso total del paquete es: "+ peso_total+ "g");
     }
 }
