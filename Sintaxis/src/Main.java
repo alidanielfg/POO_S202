@@ -1,8 +1,6 @@
 // Zona de importacion
 import java.util.Scanner;
 
-import java.util.Scanner;
-
 //clase principal
 public class Main {
     //Metodo Principal
@@ -51,7 +49,7 @@ public class Main {
         System.out.println(numd);*/
 
         //4. Solicitud de datos
-        /*Scanner scn= new Scanner(System.in);
+        Scanner scn= new Scanner(System.in);
 
         System.out.println("Escribe una cadena: ");
         String cadena= scn.nextLine();
@@ -64,12 +62,12 @@ public class Main {
 
         System.out.println("Numero entero guardado: "+ entero);
         System.out.println("Numero decimal guardado: "+ decimal);
-        System.out.println("Cadena guardada: "+ cadena);*/
+        System.out.println("Cadena guardada: "+ cadena);
 
         //5. Boolean, operadores logico y de comparacion
 
             //Los operadores logicos siempre devuelven un resultado booleano
-            System.out.println(10 > 9);
+      /*      System.out.println(10 > 9);
             System.out.println(10 == 9);
             System.out.println(10 < 9);
             System.out.println(10 >= 9);
@@ -80,6 +78,6 @@ public class Main {
         System.out.println(x< 5 && x>10);
         System.out.println(x<5 || x>10);
         System.out.println(!(x< 5 && x>10));
-        System.out.println(!(x<5 || x>10));
+        System.out.println(!(x<5 || x>10));*/
     }
 }
