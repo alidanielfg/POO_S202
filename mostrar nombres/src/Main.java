@@ -1,4 +1,3 @@
-import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
@@ -16,8 +15,11 @@ public class Main {
 
         System.out.println(nombre.toUpperCase()+ apellidop.toUpperCase()+ apellidom.toUpperCase());
         System.out.println(nombre.toLowerCase()+ apellidop.toLowerCase()+ apellidom.toLowerCase());
-        System.out.println(nombre.toUpperCase().charAt(0)+ nombre.substring(1, nombre.length()).toLowerCase()+(" ")+
-                apellidop.toUpperCase().charAt(0)+ apellidop.substring(1, apellidop.length()).toLowerCase()+(" ")+
-                apellidom.toUpperCase().charAt(0)+ apellidom.substring(1, apellidom.length()).toLowerCase());
+
+        char inicialN = nombre.toUpperCase().charAt(0);
+        char inicialAP = apellidop.toUpperCase().charAt(0);
+        char inicialAM = apellidom.toUpperCase().charAt(0);
+
+        System.out.println("Iniciales: "+ inicialN+ inicialAP+ inicialAM);
     }
 }
