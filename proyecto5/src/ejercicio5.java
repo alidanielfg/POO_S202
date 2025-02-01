@@ -10,9 +10,20 @@ public class ejercicio5 {
         System.out.println("Ingresa una letra: ");
         String letr= scn.nextLine();
 
-        int letra= letr.indexOf(frase);
+        if (letr.length() != 1) {
+            System.out.println("Por favor, ingresa solo una letra.");
+        } else {
+            char letra = letr.charAt(0);
+            int contador = 0;
 
-        System.out.println("La cantidad de veces que la letra "+ letr+ " se repite en " +
-                frase+ " son: "+ letra);
+            for (char c : frase.toCharArray()) {
+                if (c == letra) {
+                    contador++;
+                }
+            }
+            System.out.println("La cantidad de veces que la letra '" + letr + "' se repite en \"" +
+                    frase + "\" es: " + contador);
+        }
+        scn.close();
     }
 }
