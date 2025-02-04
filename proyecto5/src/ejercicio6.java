@@ -38,7 +38,7 @@ public class ejercicio6 {
                 d = monto;
                 saldo += d;
             } else if (operacion.equals("R")) {//Se realiza la resta del retiro
-                if (monto > saldo) {//Se valida que el monto a retirar no sea mayor al saldo actual
+                if (monto > saldo) {
                     System.out.println("La operación no se puede realizar: saldo insuficiente.");
                     System.exit(0);
                 }

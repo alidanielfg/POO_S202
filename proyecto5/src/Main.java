@@ -1,5 +1,3 @@
-import jdk.swing.interop.SwingInterOpUtils;
-
 import java.util.Scanner;
 
 public class Main {
@@ -7,12 +5,11 @@ public class Main {
         Scanner scn= new Scanner(System.in);
 
         System.out.println("Ingrese un numero positivo: ");
-        int numero= scn.nextInt();
-
-        if (numero > 0){
+        int num= scn.nextInt();
+        if (num > 0){
             StringBuilder resultado = new StringBuilder();
 
-            for (int i = numero; i >= 0; i--) {
+            for (int i = 1; i <= num; i += 2) {
                 resultado.append(i).append(", ");
             }
 
@@ -20,7 +17,7 @@ public class Main {
                 resultado.setLength(resultado.length() - 2);
             }
 
-            System.out.println("Los numero anteriores son: "+ resultado);
+            System.out.println("Lista de numeros impares: " + resultado);
         } else {
             System.out.println("Por favor, ingresa un número entero positivo.");
         }

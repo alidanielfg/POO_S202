@@ -21,8 +21,8 @@ public class ejercicio5 {
                     contador++;
                 }
             }
-            System.out.println("La cantidad de veces que la letra '" + letr + "' se repite en \"" +
-                    frase + "\" es: " + contador);
+            System.out.println("La cantidad de veces que la letra '" + letr +
+                    "' se repite en \"" + frase + "\" es: " + contador);
         }
         scn.close();
     }
