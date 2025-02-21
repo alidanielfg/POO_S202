@@ -18,29 +18,27 @@ public class Main {
                 System.exit(0); // Cierra el programa
             }
 
-            if (seleccion != null) {
-                switch (seleccion) {
-                    case "consulta":
-                        cliente1.consulta();
-                        break;
-                    case "depósito":
-                        cliente1.deposito();
-                        break;
-                    case "retiro":
-                        cliente1.retiro();
-                        break;
-                    case "depósito externo":
-                        cliente1.deposito_ex();
-                        break;
-                    case "salir":
-                        JOptionPane.showMessageDialog(null, "Hasta pronto");
-                        System.exit(0);
-                        break;
-                    default:
-                        JOptionPane.showMessageDialog(null, "Opción inválida");
-                        break;
-                }//cierre switch
-            }//cierre del if
+            switch (seleccion) {
+                case "consulta":
+                    cliente1.consulta();
+                    break;
+                case "depósito":
+                    cliente1.deposito();
+                    break;
+                case "retiro":
+                    cliente1.retiro();
+                    break;
+                case "depósito externo":
+                    cliente1.deposito_ex();
+                    break;
+                case "salir":
+                    JOptionPane.showMessageDialog(null, "Hasta pronto");
+                    System.exit(0);
+                    break;
+                default:
+                    JOptionPane.showMessageDialog(null, "Opción inválida");
+                    break;
+            }//cierre switch
         }
     }
 }
