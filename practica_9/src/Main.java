@@ -39,6 +39,6 @@ public class Main {
                     JOptionPane.showMessageDialog(null, "Opción inválida");
                     break;
             }//cierre switch
-        }
+        }//CIERRE DEL WHILE
     }
 }

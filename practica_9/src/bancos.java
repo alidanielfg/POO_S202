@@ -21,26 +21,26 @@ public class bancos {
                 }
                 edad = Integer.parseInt(edadStr);
 
-                if (edad < 18) {
+                if (edad < 18) {//VALIDACION DE EDAD
                     JOptionPane.showMessageDialog(null, "No tienes la edad suficiente", "Advertencia", JOptionPane.WARNING_MESSAGE);
-                    System.exit(0);
+                    System.exit(0);//  CIERRA EL PROGRAMA SI ERES MENOR DE EDAD
                 }
-
                 String cuentaStr = JOptionPane.showInputDialog("Ingrese su número de cuenta:");
                 if (cuentaStr == null) {
                     System.exit(0); // Cierra el programa si el usuario presiona "Cancelar"
                 }
-                nodecuenta = Integer.parseInt(cuentaStr);
-
-                int confirmacion = JOptionPane.showConfirmDialog(null, "Bienvenid@ " + titular + "\nSu número de cuenta es " + nodecuenta + "?", "¿Eres tú?", JOptionPane.YES_NO_OPTION);
+                nodecuenta = Integer.parseInt(cuentaStr); //regrea a entero para realizar las operaciones
+                int confirmacion = JOptionPane.showConfirmDialog(null, "Bienvenid@ " + titular +
+                        "\nSu número de cuenta es " + nodecuenta + "?", "¿Eres tú?", JOptionPane.YES_NO_OPTION);
+                //VERIFICACION DE DATOS
                 if (confirmacion == JOptionPane.NO_OPTION) {
                     JOptionPane.showMessageDialog(null, "Verifique los datos ingresados.");
                 } else {
                     datosValidos = true; // Datos válidos, salir del bucle
                 }
-            } catch (NumberFormatException e) {
+            }
+            catch (NumberFormatException e) {//MOSTRARA ERROR HASTA QUE SOLO SE INGRESEN VALORES NUMERICOS
                 JOptionPane.showMessageDialog(null, "Error: Ingrese un valor numérico válido.", "Error", JOptionPane.ERROR_MESSAGE);
-                // El bucle continuará pidiendo los datos hasta que se ingresen correctamente
             }
         }
     }
@@ -125,15 +125,17 @@ public class bancos {
                 int confirmacion = JOptionPane.showConfirmDialog(null, "Seguro que quiere continuar?");
                 if (confirmacion == JOptionPane.YES_OPTION) {
                     saldo -= cantidad;
-                    JOptionPane.showMessageDialog(null, "Su transferencia se realizó exitosamente a la cuenta: " + nocuenta + "\nSu saldo actual es: " + saldo);
+                    JOptionPane.showMessageDialog(null, "Su transferencia se realizó exitosamente a la cuenta: " +
+                            nocuenta + "\nSu saldo actual es: " + saldo);
                 } else {
                     JOptionPane.showMessageDialog(null, "Operación cancelada.");
                 }
             } else {
-                JOptionPane.showMessageDialog(null, "Saldo insuficiente o cantidad inválida.", "Error en depósito", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Saldo insuficiente o cantidad inválida.",
+                        "Error en depósito", JOptionPane.ERROR_MESSAGE);
             }
         } catch (NumberFormatException e) {
             JOptionPane.showMessageDialog(null, "Ingrese solo números válidos.", "Error", JOptionPane.ERROR_MESSAGE);
         }
     }//CIERRE DEPOSITO_EXT
-}
+}//CIERRE DE LA CLASE
