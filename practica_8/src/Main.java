@@ -2,13 +2,7 @@ public class Main {
     public static void main(String[] args) {
 
         //crear el primer objeto
-        Spartan masterChief = new Spartan();
-
-        //usar atributos
-        masterChief.nombre = "Jhon";
-        masterChief.salud = 100;
-        masterChief.escudo = 50;
-        masterChief.armaPrincipal = "Rifle de asalto";
+        Spartan masterChief = new Spartan("Jhon",100,70,"Rifle de asalto");
 
         //invocamos metodos
         masterChief.mostrarInfo();
@@ -16,13 +10,15 @@ public class Main {
         masterChief.recargarArma(80);
         masterChief.correr(true);
 
-        //creamos el segundo objeto
-        Spartan spartan = new Spartan();
+        
 
-        spartan.nombre = "Pali";
-        spartan.salud = 500;
-        spartan.escudo = 200;
-        spartan.armaPrincipal = "Pistola NERF";
+        //USAMOS GET Y SETPARA CAMBIAR EL NOMBRE
+        masterChief.setNombre("Daniel");
+        masterChief.mostrarInfo();
+        System.out.println(masterChief.getNombre());
+
+        //creamos el segundo objeto
+        Spartan spartan = new Spartan("Pali",500,200,"Pistola NERF");
 
         spartan.mostrarInfo();
         spartan.atacar("Nomo de jardin");
