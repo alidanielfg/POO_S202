@@ -4,10 +4,7 @@ public class Main {
     public static void main(String[] args) {
         String[] opciones = {"consulta","depósito","retiro","depósito externo","salir"};
 
-        bancos cliente1 = new bancos();
-
-        cliente1.bienvenida();
-        cliente1.cliente();
+        bancos cliente1 = new bancos(0,0,"",0);
 
         while(true) {
             String seleccion = (String) JOptionPane.showInputDialog(null, "Seleccione una operación",
@@ -29,7 +26,7 @@ public class Main {
                     cliente1.retiro();
                     break;
                 case "depósito externo":
-                    cliente1.deposito_ex();
+                    cliente1.depositoex();
                     break;
                 case "salir":
                     JOptionPane.showMessageDialog(null, "Hasta pronto");

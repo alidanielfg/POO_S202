@@ -10,7 +10,7 @@ public class Main {
         masterChief.recargarArma(80);
         masterChief.correr(true);
 
-        
+
 
         //USAMOS GET Y SETPARA CAMBIAR EL NOMBRE
         masterChief.setNombre("Daniel");

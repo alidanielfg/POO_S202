@@ -13,6 +13,7 @@ public class contrasenias {
             return 8;//SI SE INGRESA UN VALOR NO VALIDO, SE PONDRA 8 POR DEFAULT
         }
     }
+
     //CREA UNA CONTRASEÑA SIN MAYUSCULAS NI CARACTERES
     public static String basica(int longitud) {
         final String chars = "abcdefghijklmnopqrstuvwxyz0123456789";
@@ -45,7 +46,7 @@ public class contrasenias {
         return sb.toString();//REGRESA LA CONTRASEÑA
     }
     //VERIFICACION DE SEGURIDAD
-    public static boolean contrasegura(String contrasena) {
+    private static boolean contrasegura(String contrasena) {
 
         boolean mayuscula = false;
         boolean minuscula = false;

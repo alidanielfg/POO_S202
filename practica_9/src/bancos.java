@@ -1,11 +1,16 @@
 import javax.swing.*;
 
 public class bancos {
-    public int edad, nodecuenta;
-    public String titular;
-    public float saldo = 100;
+    private int edad, nodecuenta;
+    private String titular;
+    private float saldo;
 
-    public void bienvenida() {
+    public bancos(int edad, int nodecuenta, String titular, float saldo) {
+        this.bienvenida();
+        this.cliente();
+    }
+
+    private void bienvenida() {
         boolean datosValidos = false;
 
         while (!datosValidos) {
@@ -45,7 +50,7 @@ public class bancos {
         }
     }
 
-    public void cliente(){
+    private void cliente(){
         try {
             String inputSaldo = JOptionPane.showInputDialog(null, "Ingrese su cantidad inicial: ");
             if (inputSaldo == null) {
@@ -107,7 +112,7 @@ public class bancos {
         }
     }//CIERRE RETIRO
 
-    public void deposito_ex(){
+    public void depositoex(){
         try {
             String cuentaStr = JOptionPane.showInputDialog("Ingrese el número de cuenta a la que va a transferir:");
             if (cuentaStr == null) {
