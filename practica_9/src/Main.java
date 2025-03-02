@@ -10,8 +10,7 @@ public class Main {
             String seleccion = (String) JOptionPane.showInputDialog(null, "Seleccione una operación",
                     "Menu de operaciones", JOptionPane.QUESTION_MESSAGE, null, opciones, opciones[0]);
 
-            if (seleccion == null) {
-                JOptionPane.showMessageDialog(null, "Operación cancelada. Cerrando el programa.");
+            if (seleccion == nullJOptionPane.showMessageDialog(null, "Operación cancelada. Cerrando el programa.");
                 System.exit(0); // Cierra el programa
             }
 
