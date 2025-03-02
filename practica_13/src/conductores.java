@@ -16,7 +16,8 @@ public class conductores {
     }
 
     public void mostrarinfo(){
-        JOptionPane.showMessageDialog(null,"Nombre: "+ getNombre()+ "\nIdentificación:" + getIdentificacion()+ "\nlicencia: "+ getNolicencia());
+        JOptionPane.showMessageDialog(null,"Nombre: "+ getNombre()+ "\nIdentificación:" + getIdentificacion()+ "\nlicencia: "+ getNolicencia(),
+                "Conductor",JOptionPane.INFORMATION_MESSAGE);
     }
 
     public String getNombre() {
