@@ -13,7 +13,8 @@ public class Main {
 
         while (true) {
             String opcion = (String) JOptionPane.showInputDialog(null, "Menú:\n1. Registrar Vehículo \n2. Registrar Conductor" +
-                            "\n3. Asignar Conductor \n4. Registrar Envío (con peso) \n5. Registrar Envío (sin peso) \n6. Registrar Entrega \n7. Actualizar estado de entrega \n8. Mostrar información \n9. Salir",
+                            "\n3. Asignar Conductor \n4. Registrar Envío (con peso) \n5. Registrar Envío (sin peso) " +
+                            "\n6. Registrar Entrega \n7. Actualizar estado de entrega \n8. Mostrar información \n9. Salir",
                     "Menú", JOptionPane.QUESTION_MESSAGE, null, opciones, opciones[0]);
 
             if (opcion == null) {

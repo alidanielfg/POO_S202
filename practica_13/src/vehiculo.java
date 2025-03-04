@@ -12,7 +12,8 @@ public class vehiculo {
 
         setPlaca(JOptionPane.showInputDialog(null,"Ingrese la placa:","Placas",JOptionPane.INFORMATION_MESSAGE));
         setModelo(JOptionPane.showInputDialog(null,"Ingrese el modelo","Modelos",JOptionPane.INFORMATION_MESSAGE));
-        setCapacidad(Float.parseFloat(JOptionPane.showInputDialog(null,"Ingrese la capacidad en kg","Capacidad",JOptionPane.INFORMATION_MESSAGE)));
+        setCapacidad(Float.parseFloat(JOptionPane.showInputDialog(null,"Ingrese la capacidad en kg",
+                "Capacidad",JOptionPane.INFORMATION_MESSAGE)));
     }
 
     public void AsignarConductor(conductores conductor){
@@ -38,16 +39,11 @@ public class vehiculo {
         } else {
             infoVehiculo += "\n\nEl vehículo no tiene conductor asignado.";
         }
-
         JOptionPane.showMessageDialog(null, infoVehiculo);
     }
-
-
-
     public String getPlaca() {
         return placa;
     }
-
     public void setPlaca(String placa) {
         this.placa = placa;
     }
@@ -55,19 +51,15 @@ public class vehiculo {
     public String getModelo() {
         return modelo;
     }
-
     public void setModelo(String modelo) {
         this.modelo = modelo;
     }
-
     public float getCapacidad() {
         return capacidad;
     }
-
     public void setCapacidad(float capacidad) {
         this.capacidad = capacidad;
     }
-
     public conductores getConductor() {
         return conductor;
     }

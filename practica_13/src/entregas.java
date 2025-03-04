@@ -8,15 +8,15 @@ public class entregas {
     private static final String[] estadoperm= {"pendiente","en transito", "entregado"};
 
     public entregas() {
-        this.noguia = noguia = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingresa el numero de guia"));
+        this.noguia =Integer.parseInt(JOptionPane.showInputDialog(null, "Ingresa el numero de guia"));
         this.estado = "pendiente";
     }
 
     public void modificarestado(){
         boolean estadoValido = false;
         while (!estadoValido) {
-            nuevoestado = JOptionPane.showInputDialog(null, "Actualizar estado de envío (pendiente, en trnsito, entregado): ", "en transito");
-
+            nuevoestado = JOptionPane.showInputDialog(null, "Actualizar estado de envío (pendiente, en trnsito, entregado): ",
+                    "en transito");
             for (String estadoPermitido : estadoperm) {
                 if (nuevoestado.equals(estadoPermitido)) {
                     estadoValido = true;
@@ -25,36 +25,12 @@ public class entregas {
                 }
             }
             if (!estadoValido) {
-                JOptionPane.showMessageDialog(null, "Estado inválido. Solo se permiten los estados 'pendiente', 'en tránsito', 'entregado'. Inténtalo de nuevo.");
+                JOptionPane.showMessageDialog(null, "Estado inválido. Solo se permiten los estados 'pendiente'," +
+                        " 'en tránsito', 'entregado'. Inténtalo de nuevo.");
             }
         }
     }
-
     public void mostrarInfo() {
         JOptionPane.showMessageDialog(null, "Número de guía: " + noguia + "\nEstado: " + estado);
-    }
-
-    public int getNoguia() {
-        return noguia;
-    }
-
-    public void setNoguia(int noguia) {
-        this.noguia = noguia;
-    }
-
-    public String getEstado() {
-        return estado;
-    }
-
-    public void setEstado(String estado) {
-        this.estado = estado;
-    }
-
-    public String getNuevoestado() {
-        return nuevoestado;
-    }
-
-    public void setNuevoestado(String nuevoestado) {
-        this.nuevoestado = nuevoestado;
     }
 }
