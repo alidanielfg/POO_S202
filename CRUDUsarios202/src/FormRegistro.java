@@ -20,7 +20,7 @@ public class FormRegistro extends javax.swing.JFrame {
         verificarConexion(); /*se llama la funcion para verificar conexion*/
     }
     
-    private void verificarConexion(){
+    private void verificarConexion(){ //Método para realizar la verificacion la conexion de la base de datos a el programa
         
         Connection conexion = ConexionMySQL.conectar();
         
@@ -87,6 +87,11 @@ public class FormRegistro extends javax.swing.JFrame {
         btnLimpiar.setBackground(new java.awt.Color(0, 255, 255));
         btnLimpiar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnLimpiar.setText("Limpiar");
+        btnLimpiar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLimpiarActionPerformed(evt);
+            }
+        });
 
         jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
 
@@ -153,8 +158,40 @@ public class FormRegistro extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
-        // TODO add your handling code here:
+        // 1- Obtener los valores de los txt
+        String nombre = txtNombre.getText();
+        String correo = txtCorreo.getText();
+        String contrasena = txtContrasena.getText();
+        
+        // 2- Validar que no envie vacios a DB
+        if(nombre.isEmpty() || correo.isEmpty() || contrasena.isEmpty()){
+            JOptionPane.showMessageDialog(this,"Todos los campos son obligatorios","Error",JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+        
+        //3- Ejecutamos la inserción
+        UserCRUD crud = new UserCRUD();
+        boolean status = crud.crearUsuario(nombre, correo, contrasena);
+        
+        //4- Notificar al usuario del estatus de su insert
+        if(status){
+            JOptionPane.showMessageDialog(this,"Usuario guardado","Exito",JOptionPane.INFORMATION_MESSAGE);
+        }else{
+            JOptionPane.showMessageDialog(this,"No se guardo","Error",JOptionPane.ERROR);
+        }
+        
+        limpiarCampos();
     }//GEN-LAST:event_btnGuardarActionPerformed
+
+    private void limpiarCampos(){
+        txtNombre.setText("");
+        txtCorreo.setText("");
+        txtContrasena.setText("");
+    }
+    
+    private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
+        limpiarCampos();
+    }//GEN-LAST:event_btnLimpiarActionPerformed
 
     /**
      * @param args the command line arguments
