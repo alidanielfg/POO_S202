@@ -53,6 +53,11 @@ public class Menu extends javax.swing.JFrame {
         btnAgregar.add(jMenuItem2);
 
         jMenuItem3.setText("Actualizar");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
         btnAgregar.add(jMenuItem3);
 
         jMenuItem4.setText("Eliminar");
@@ -85,6 +90,11 @@ public class Menu extends javax.swing.JFrame {
         FormConsulta FC= new FormConsulta();
         FC.setVisible(true);
     }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        FormActualizar FA= new FormActualizar();
+        FA.setVisible(true);
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     /**
      * @param args the command line arguments
